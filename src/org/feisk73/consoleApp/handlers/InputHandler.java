@@ -12,7 +12,6 @@ public class InputHandler {
         this.main = main;
     }
     public void handleThis(String text) {
-        System.out.println(text);
         JTextField field = main.getConsolePanel().getInputPanel().getInputField();
         main.getConsolePanel().getLogPanel().printOutput(field.getText(), true);
         field.setText("");
@@ -20,4 +19,3 @@ public class InputHandler {
         main.getCommandHandler().executeCommand(text.toLowerCase());
     }
 }
-    

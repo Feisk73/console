@@ -16,6 +16,6 @@ public class HelpCommand implements Command {
 
     @Override
     public String getDescription() {
-        return "returns a list of all console.commands with descriptions";
+        return "returns a list of all console commands with descriptions";
     }
 }

@@ -21,14 +21,12 @@ public class CommandHandler {
         Command command = commands.get(commandName);
         if (command != null) {
             command.execute(args);
-        } else {
-            System.out.println("error!");
         }
     }
     public String commandList() {
         StringBuilder result = new StringBuilder();
         commands.forEach((name, cmd) ->
-                result.append(String.format("%-10s %s%n", name, cmd.getDescription()) + "\n")
+                result.append(String.format("%-10s %s%n", name, cmd.getDescription()))
         );
         return result.toString();
     }
