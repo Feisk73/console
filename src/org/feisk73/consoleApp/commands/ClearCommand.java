@@ -3,11 +3,9 @@ package org.feisk73.consoleApp.commands;
 import org.feisk73.consoleApp.ConsoleMain;
 import org.feisk73.consoleApp.UI.LogPanel;
 
-public class ClearCommand implements Command {
-    private final ConsoleMain main;
-
+public class ClearCommand extends CommandBase implements Command {
     public ClearCommand(ConsoleMain main) {
-        this.main = main;
+        super(main);
     }
 
     @Override

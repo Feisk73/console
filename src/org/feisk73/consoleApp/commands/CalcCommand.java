@@ -4,11 +4,10 @@ import org.feisk73.consoleApp.ConsoleMain;
 
 import java.text.DecimalFormat;
 
-public class CalcCommand implements Command {
-    private final ConsoleMain main;
+public class CalcCommand extends CommandBase implements Command {
 
     public CalcCommand(ConsoleMain main) {
-        this.main = main;
+        super(main);
     }
 
     @Override

@@ -6,11 +6,9 @@ import java.net.HttpURLConnection;
 import java.net.InetAddress;
 import java.net.URL;
 
-public class PingCommand implements Command {
-    private final ConsoleMain main;
-
+public class PingCommand extends CommandBase implements Command {
     public PingCommand(ConsoleMain main) {
-        this.main = main;
+        super(main);
     }
 
     @Override

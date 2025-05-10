@@ -2,11 +2,9 @@ package org.feisk73.consoleApp.commands;
 
 import org.feisk73.consoleApp.ConsoleMain;
 
-public class EchoCommand implements Command {
-    private final ConsoleMain main;
-
-    public EchoCommand(ConsoleMain main) {
-        this.main = main;
+public class EchoCommand extends CommandBase implements Command {
+        public EchoCommand(ConsoleMain main) {
+        super(main);
     }
 
     @Override

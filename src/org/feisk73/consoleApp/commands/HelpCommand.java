@@ -1,10 +1,9 @@
 package org.feisk73.consoleApp.commands;
 import org.feisk73.consoleApp.ConsoleMain;
 
-public class HelpCommand implements Command {
-    private final ConsoleMain main;
+public class HelpCommand extends CommandBase implements Command {
     public HelpCommand(ConsoleMain main) {
-        this.main = main;
+        super(main);
     }
 
     @Override
