@@ -3,6 +3,7 @@ package org.feisk73.consoleApp;
 import org.feisk73.consoleApp.UI.ApplicationWindow;
 import org.feisk73.consoleApp.UI.ConsolePanel;
 import org.feisk73.consoleApp.commands.CalcCommand;
+import org.feisk73.consoleApp.commands.ClearCommand;
 import org.feisk73.consoleApp.commands.EchoCommand;
 import org.feisk73.consoleApp.commands.HelpCommand;
 import org.feisk73.consoleApp.handlers.CommandHandler;
@@ -27,6 +28,7 @@ public class ConsoleMain {
         commandHandler.registerCommand("help", new HelpCommand(this));
         commandHandler.registerCommand("echo", new EchoCommand(this));
         commandHandler.registerCommand("calc", new CalcCommand(this));
+        commandHandler.registerCommand("clear", new ClearCommand(this));
 
         window.getFrame().addWindowListener(new WindowAdapter() {
             @Override

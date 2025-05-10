@@ -32,4 +32,11 @@ public class LogPanel extends JPanel {
         addText(output.toString());
     }
 
+    public JTextArea getTextArea() {
+        return textArea;
+    }
+
+    public String getSTART_MSG() {
+        return START_MSG;
+    }
 }
