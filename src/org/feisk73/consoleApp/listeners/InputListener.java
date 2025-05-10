@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class InputListener implements ActionListener {
-    private ConsoleMain main;
+    private final ConsoleMain main;
     public InputListener(ConsoleMain main) {
         this.main = main;
     }

@@ -7,7 +7,7 @@ import java.net.InetAddress;
 import java.net.URL;
 
 public class PingCommand implements Command {
-    private ConsoleMain main;
+    private final ConsoleMain main;
 
     public PingCommand(ConsoleMain main) {
         this.main = main;

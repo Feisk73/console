@@ -6,9 +6,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class ConsolePanel extends JPanel {
-    private ConsoleMain main;
-    private LogPanel logPanel;
-    private InputPanel inputPanel;
+    private final ConsoleMain main;
+    private final LogPanel logPanel;
+    private final InputPanel inputPanel;
 
     public ConsolePanel(ConsoleMain main) {
         this.main = main;

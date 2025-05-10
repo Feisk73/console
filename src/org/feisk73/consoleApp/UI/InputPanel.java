@@ -16,8 +16,15 @@ public class InputPanel extends JPanel {
         submitBtn = new JButton();
         inputField = new JTextField();
 
+        submitBtn.setContentAreaFilled(false);
+        submitBtn.setOpaque(true);
+        submitBtn.setBackground(Color.darkGray);
+        submitBtn.setForeground(Color.white);
+
         submitBtn.setFont(main.getFont());
         inputField.setFont(main.getFont());
+
+        submitBtn.setText("Send");
 
         add(submitBtn, BorderLayout.WEST);
         add(inputField, BorderLayout.CENTER);
