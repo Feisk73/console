@@ -1,15 +1,20 @@
 package org.feisk73.consoleApp.UI;
 
+import org.feisk73.consoleApp.ConsoleMain;
+import org.feisk73.consoleApp.handlers.CommandHandler;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class LogPanel extends JPanel {
     private final String START_MSG = "Console started!\n";
     private final JTextArea textArea = new JTextArea();
-    public LogPanel(ConsolePanel main) {
+    private ConsoleMain main;
+    public LogPanel(ConsoleMain main) {
+        this.main = main;
         setLayout(new BorderLayout(5, 5));
         textArea.setText(START_MSG);
-        textArea.setFont(main.getMain().getFont());
+        textArea.setFont(main.getFont());
         textArea.setLineWrap(true);
         textArea.setWrapStyleWord(true);
         textArea.setEditable(false);

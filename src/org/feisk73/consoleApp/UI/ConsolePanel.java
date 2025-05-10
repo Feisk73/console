@@ -12,8 +12,8 @@ public class ConsolePanel extends JPanel {
 
     public ConsolePanel(ConsoleMain main) {
         this.main = main;
-        logPanel = new LogPanel(this);
-        inputPanel = new InputPanel(this);
+        logPanel = new LogPanel(main);
+        inputPanel = new InputPanel(main);
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         inputPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 30));
