@@ -4,7 +4,7 @@ import org.feisk73.consoleApp.ConsoleMain;
 import org.feisk73.consoleApp.UI.LogPanel;
 
 public class ClearCommand implements Command {
-    private ConsoleMain main;
+    private final ConsoleMain main;
 
     public ClearCommand(ConsoleMain main) {
         this.main = main;

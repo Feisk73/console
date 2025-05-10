@@ -45,9 +45,8 @@ public class CalcCommand implements Command {
                 result = a * b;
                 break;
             case "/":
-                try {
-                    result = a / b;
-                } catch (ArithmeticException e) {}
+                if (b != 0) {result = a / b;}
+                else {result = 0;}
                 break;
             case "%":
                 result = a % b;

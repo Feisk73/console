@@ -1,6 +1,5 @@
 package org.feisk73.consoleApp.commands;
 import org.feisk73.consoleApp.ConsoleMain;
-import org.feisk73.consoleApp.handlers.CommandHandler;
 
 public class HelpCommand implements Command {
     private final ConsoleMain main;

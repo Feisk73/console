@@ -1,10 +1,8 @@
 package org.feisk73.consoleApp.handlers;
 
 import org.feisk73.consoleApp.ConsoleMain;
-import org.feisk73.consoleApp.UI.InputPanel;
 
 import javax.swing.*;
-import java.util.Locale;
 
 public class InputHandler {
     private final ConsoleMain main;

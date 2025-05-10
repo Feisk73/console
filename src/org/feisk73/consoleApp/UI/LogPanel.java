@@ -1,15 +1,11 @@
 package org.feisk73.consoleApp.UI;
 
-import org.feisk73.consoleApp.ConsoleMain;
-
 import javax.swing.*;
 import java.awt.*;
 
 public class LogPanel extends JPanel {
     private final String START_MSG = "Console started!\n";
-    private JTextArea textArea = new JTextArea();
-    private JScrollPane scrollPane = new JScrollPane(textArea);
-    private ConsolePanel main;
+    private final JTextArea textArea = new JTextArea();
     public LogPanel(ConsolePanel main) {
         setLayout(new BorderLayout(5, 5));
         textArea.setText(START_MSG);
@@ -17,7 +13,7 @@ public class LogPanel extends JPanel {
         textArea.setLineWrap(true);
         textArea.setWrapStyleWord(true);
         textArea.setEditable(false);
-        add(scrollPane, BorderLayout.CENTER);
+        add(new JScrollPane(textArea), BorderLayout.CENTER);
     }
     private void addText(String text) {
         textArea.setText(textArea.getText() + "\n" + text);

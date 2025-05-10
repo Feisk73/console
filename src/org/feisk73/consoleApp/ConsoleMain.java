@@ -14,11 +14,11 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class ConsoleMain {
-    private ApplicationWindow window = new ApplicationWindow();;
-    private ConsolePanel consolePanel;
-    private Font font = new Font("Consolas", Font.PLAIN, 14);
-    private InputHandler inputHandler;
-    private CommandHandler commandHandler;
+    private final ApplicationWindow window = new ApplicationWindow();;
+    private final ConsolePanel consolePanel;
+    private final Font font = new Font("Consolas", Font.PLAIN, 14);
+    private final InputHandler inputHandler;
+    private final CommandHandler commandHandler;
 
     public ConsoleMain() {
         consolePanel = new ConsolePanel(this);

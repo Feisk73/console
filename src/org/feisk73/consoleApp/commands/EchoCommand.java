@@ -2,8 +2,6 @@ package org.feisk73.consoleApp.commands;
 
 import org.feisk73.consoleApp.ConsoleMain;
 
-import java.util.Arrays;
-
 public class EchoCommand implements Command {
     private final ConsoleMain main;
 
