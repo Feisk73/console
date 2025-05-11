@@ -4,6 +4,7 @@ import org.feisk73.consoleApp.ConsoleMain;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Arrays;
 
 public class LogPanel extends JPanel {
     private final String START_MSG = "Console started!\n";
@@ -30,6 +31,13 @@ public class LogPanel extends JPanel {
         }
         output.append(text);
         addText(output.toString());
+    }
+    public String[] extractCommands() {
+        return Arrays.stream(textArea.getText().split("\n"))
+                .filter(line -> line.startsWith(">"))
+                .map(line -> line.substring(1).trim())
+                .filter(cmd -> !cmd.isEmpty())
+                .toArray(String[]::new);
     }
 
     public JTextArea getTextArea() {

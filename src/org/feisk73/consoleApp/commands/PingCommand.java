@@ -15,7 +15,14 @@ public class PingCommand extends CommandBase implements Command {
     public void execute(String[] args) {
         int attempts = 5;
         int timeout = 5000;
-        String url = args[0];
+        String url;
+        try {
+            url = args[0];
+        } catch (Exception e) {
+            main.output("Argument \"URL\" not found");
+            return;
+        }
+
         try {
             String targetUrl = url.startsWith("http") ? url : "https://" + url;
             URL target = new URL(targetUrl);

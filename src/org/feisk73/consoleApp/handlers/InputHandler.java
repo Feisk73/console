@@ -10,6 +10,7 @@ public class InputHandler {
         this.main = main;
     }
     public void handleThis(String text) {
+        main.getConsolePanel().getInputPanel().setCmdSelected(0);
         JTextField field = main.getConsolePanel().getInputPanel().getInputField();
         main.getConsolePanel().getLogPanel().printOutput(field.getText(), true);
         field.setText("");
