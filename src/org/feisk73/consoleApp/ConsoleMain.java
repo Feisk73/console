@@ -27,6 +27,8 @@ public class ConsoleMain {
         commandHandler.registerCommand("calc", new CalcCommand(this));
         commandHandler.registerCommand("clear", new ClearCommand(this));
         commandHandler.registerCommand("ping", new PingCommand(this));
+        commandHandler.registerCommand("time", new TimeCommand(this));
+        commandHandler.registerCommand("random", new RandomCommand(this));
 
         window.getFrame().addWindowListener(new WindowAdapter() {
             @Override
@@ -38,6 +40,8 @@ public class ConsoleMain {
         window.getFrame().add(consolePanel);
         window.initialize();
     }
+
+
 
     public void output(String text) {
         consolePanel.getLogPanel().printOutput(text, false);
