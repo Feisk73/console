@@ -18,7 +18,7 @@ public class RandomCommand extends CommandBase implements Command {
             min = Integer.parseInt(args[0]);
             max = Integer.parseInt(args[1]);
         } catch (NumberFormatException e) {
-            main.output("NaN");
+            print("NaN");
             return;
         }
         Random random = new Random();
@@ -31,11 +31,11 @@ public class RandomCommand extends CommandBase implements Command {
         if (min == max) {
             output = min;
         }
-        main.output(String.valueOf(output));
+        print(String.valueOf(output));
     }
 
     @Override
     public String getDescription() {
-        return "";
+        return "returns a random number";
     }
 }

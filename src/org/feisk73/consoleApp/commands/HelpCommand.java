@@ -9,7 +9,7 @@ public class HelpCommand extends CommandBase implements Command {
     @Override
     public void execute(String[] args) {
         String output = main.getCommandHandler().commandList();
-        main.getConsolePanel().getLogPanel().printOutput(output, false);
+        print(output);
     }
 
     @Override

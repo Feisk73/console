@@ -19,7 +19,7 @@ public class PingCommand extends CommandBase implements Command {
         try {
             url = args[0];
         } catch (Exception e) {
-            main.output("Argument \"URL\" not found");
+            print("Argument \"URL\" not found");
             return;
         }
 
@@ -29,7 +29,7 @@ public class PingCommand extends CommandBase implements Command {
             String host = target.getHost();
             InetAddress ip = InetAddress.getByName(host);
 
-            main.output(String.format("Pinging %s [%s]:", host, ip.getHostAddress()));
+            print(String.format("Pinging %s [%s]:", host, ip.getHostAddress()));
 
             long[] pings = new long[attempts];
 
@@ -42,13 +42,13 @@ public class PingCommand extends CommandBase implements Command {
                 conn.connect();
                 int code = conn.getResponseCode();
                 long ping = System.currentTimeMillis() - startTime;
-                main.output(String.format("%s: time=%d status=%d %s", ip.getHostAddress(), ping, code, getHttpStatusMessage(code)));
+                print(String.format("%s: time=%d status=%d %s", ip.getHostAddress(), ping, code, getHttpStatusMessage(code)));
                 pings[i] = ping;
                 conn.disconnect();
             }
             printStats(pings);
         } catch (Exception e) {
-            main.output(e.getMessage());
+            print(e.getMessage());
         }
 
     }
@@ -78,9 +78,9 @@ public class PingCommand extends CommandBase implements Command {
             sum += time;
         }
 
-        main.output("");
-        main.output("- Min ping: " + min + " ms");
-        main.output("- Max ping: " + max + " ms");
-        main.output("- Average ping: " + (double)sum/times.length + " ms");
+        print("");
+        print("- Min ping: " + min + " ms");
+        print("- Max ping: " + max + " ms");
+        print("- Average ping: " + (double)sum/times.length + " ms");
     }
 }

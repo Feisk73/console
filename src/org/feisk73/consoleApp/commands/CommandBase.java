@@ -8,4 +8,7 @@ public abstract class CommandBase implements Command {
     public CommandBase(ConsoleMain main) {
         this.main = main;
     }
+    public void print(String text) {
+        main.getConsolePanel().getLogPanel().printOutput(text, false);
+    }
 }

@@ -29,7 +29,7 @@ public class CalcCommand extends CommandBase implements Command {
                 operation = newargs[1];
             }
         } catch (NumberFormatException e) {
-            main.output("NaN");
+            print("NaN");
             return;
         }
 
@@ -51,7 +51,7 @@ public class CalcCommand extends CommandBase implements Command {
                 result = a % b;
                 break;
         }
-        main.output(formatNumber(a) + operation + formatNumber(b) + " = " + formatNumber(result));
+        print(formatNumber(a) + operation + formatNumber(b) + " = " + formatNumber(result));
     }
 
     @Override

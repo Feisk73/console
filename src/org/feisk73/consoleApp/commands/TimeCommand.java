@@ -17,11 +17,11 @@ public class TimeCommand extends CommandBase implements Command {
         LocalTime currentTime = LocalTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
         String formatted_time = currentTime.format(formatter);
-        main.output(currentDate + " " + formatted_time);
+        print(currentDate + " " + formatted_time);
     }
 
     @Override
     public String getDescription() {
-        return "";
+        return "returns current date and time";
     }
 }

@@ -15,7 +15,7 @@ public class EchoCommand extends CommandBase implements Command {
             output.append(string);
             output.append(' ');
         }
-        main.output(output.toString());
+        print(output.toString());
     }
 
     @Override

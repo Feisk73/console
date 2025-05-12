@@ -41,12 +41,6 @@ public class ConsoleMain {
         window.initialize();
     }
 
-
-
-    public void output(String text) {
-        consolePanel.getLogPanel().printOutput(text, false);
-    }
-
     public Font getFont() {
         return font;
     }
