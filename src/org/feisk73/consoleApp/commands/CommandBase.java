@@ -11,4 +11,7 @@ public abstract class CommandBase implements Command {
     public void print(String text) {
         main.getConsolePanel().getLogPanel().printOutput(text, false);
     }
+    public void printf(String text, Object... args) {
+        print(String.format(text, args));
+    }
 }
