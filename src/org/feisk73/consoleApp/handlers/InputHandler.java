@@ -15,6 +15,6 @@ public class InputHandler {
         main.getConsolePanel().getLogPanel().printOutput(field.getText(), true);
         field.setText("");
 
-        main.getCommandHandler().executeCommand(text.toLowerCase());
+        main.getCommandHandler().executeCommand(text);
     }
 }

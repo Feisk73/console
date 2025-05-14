@@ -29,6 +29,8 @@ public class ConsoleMain {
         commandHandler.registerCommand("ping", new PingCommand(this));
         commandHandler.registerCommand("time", new TimeCommand(this));
         commandHandler.registerCommand("random", new RandomCommand(this));
+        commandHandler.registerCommand("exit", new ExitCommand(this));
+        commandHandler.registerCommand("base64", new Base64Command(this));
 
         window.getFrame().addWindowListener(new WindowAdapter() {
             @Override
