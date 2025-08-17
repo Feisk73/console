@@ -18,7 +18,7 @@ public class CommandHandler {
         String commandName = parts[0];
         String[] args = Arrays.copyOfRange(parts, 1, parts.length);
 
-        Command command = commands.get(commandName);
+        Command command = commands.get(commandName.toLowerCase());
         if (command != null) {
             command.execute(args);
         }
